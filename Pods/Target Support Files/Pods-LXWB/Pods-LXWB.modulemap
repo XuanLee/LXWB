@@ -1,0 +1,6 @@
+framework module Pods_LXWB {
+  umbrella header "Pods-LXWB-umbrella.h"
+
+  export *
+  module * { export * }
+}
