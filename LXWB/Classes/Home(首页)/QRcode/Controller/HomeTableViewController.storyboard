@@ -114,7 +114,7 @@
                                                 <constraint firstAttribute="height" constant="44" id="xnz-rx-TeI"/>
                                             </constraints>
                                         </view>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="40c-3c-gdb">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="40c-3c-gdb" customClass="LXPictureView" customModule="LXWB" customModuleProvider="target">
                                             <rect key="frame" x="10" y="121" width="290" height="90"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -135,25 +135,37 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-AO-hgg">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-AO-hgg" customClass="LXProgressImageView" customModule="LXWB" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gif" translatesAutoresizingMaskIntoConstraints="NO" id="HVT-4d-TE9">
+                                                                <rect key="frame" x="60" y="73" width="30" height="17"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="7vj-0N-5a2"/>
+                                                                    <constraint firstAttribute="height" constant="17" id="NVy-pn-xZc"/>
+                                                                </constraints>
                                                             </imageView>
                                                         </subviews>
                                                     </view>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="HVT-4d-TE9" secondAttribute="bottom" id="CEp-Eh-gj2"/>
                                                         <constraint firstItem="wIQ-AO-hgg" firstAttribute="leading" secondItem="nLs-GL-5bM" secondAttribute="leading" id="DSj-Ic-xG4"/>
                                                         <constraint firstAttribute="bottom" secondItem="wIQ-AO-hgg" secondAttribute="bottom" id="N8v-uy-ujK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HVT-4d-TE9" secondAttribute="trailing" id="QJL-Sn-zGs"/>
                                                         <constraint firstAttribute="trailing" secondItem="wIQ-AO-hgg" secondAttribute="trailing" id="Ua3-vJ-0Wy"/>
                                                         <constraint firstItem="wIQ-AO-hgg" firstAttribute="top" secondItem="nLs-GL-5bM" secondAttribute="top" id="uzR-6e-GHw"/>
                                                     </constraints>
                                                     <size key="customSize" width="90" height="90"/>
                                                     <connections>
-                                                        <outlet property="customIconImageView" destination="wIQ-AO-hgg" id="MQn-6u-3D0"/>
+                                                        <outlet property="customIconImageView" destination="wIQ-AO-hgg" id="JMZ-MV-6BQ"/>
+                                                        <outlet property="gifImageView" destination="HVT-4d-TE9" id="9Yv-66-gTE"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
                                             <connections>
-                                                <outlet property="dataSource" destination="7xf-sa-Iz4" id="9De-aL-pHP"/>
+                                                <outlet property="flowLayout" destination="nsF-EG-jSi" id="7DE-EF-bX5"/>
+                                                <outlet property="pictureCollectionViewHeightCons" destination="b6b-Qk-tbg" id="MBp-8P-qvw"/>
+                                                <outlet property="pictureCollectionViewWidthCons" destination="IkP-Ie-cwF" id="WYM-L5-YdQ"/>
                                             </connections>
                                         </collectionView>
                                     </subviews>
@@ -183,13 +195,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="contentLabel" destination="5Ml-Zf-eeK" id="Pg5-ah-cVS"/>
-                                    <outlet property="flowLayout" destination="nsF-EG-jSi" id="mlL-RI-4Ua"/>
                                     <outlet property="footerView" destination="y3d-2L-dEq" id="bFa-iZ-VdD"/>
                                     <outlet property="iconImageView" destination="tJ9-g6-4Ti" id="SVw-nw-tWa"/>
                                     <outlet property="nameLabel" destination="KFu-ia-drP" id="0GD-5S-TvV"/>
                                     <outlet property="pictureCollectionView" destination="40c-3c-gdb" id="bLe-ZG-WJp"/>
-                                    <outlet property="pictureCollectionViewHeightCons" destination="b6b-Qk-tbg" id="sUl-UL-w2y"/>
-                                    <outlet property="pictureCollectionViewWidthCons" destination="IkP-Ie-cwF" id="3hQ-pU-Trx"/>
                                     <outlet property="sourceLabel" destination="XMY-FW-d3s" id="Qc3-nV-Lzl"/>
                                     <outlet property="timeLabel" destination="z94-sa-oCx" id="fjd-b4-dO4"/>
                                     <outlet property="verifiedImageView" destination="Xv6-Zn-yvY" id="3QK-Dv-7ar"/>
@@ -300,7 +309,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nui-0i-Sdb">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nui-0i-Sdb" customClass="LXPictureView" customModule="LXWB" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="28" width="290" height="90"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -321,25 +330,37 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7FO-yG-nbg">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7FO-yG-nbg" customClass="LXProgressImageView" customModule="LXWB" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                                    </imageView>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gif" translatesAutoresizingMaskIntoConstraints="NO" id="3Kd-yK-JU1">
+                                                                        <rect key="frame" x="60" y="73" width="30" height="17"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="30" id="Dg0-L1-jFD"/>
+                                                                            <constraint firstAttribute="height" constant="17" id="DlK-So-2RB"/>
+                                                                        </constraints>
                                                                     </imageView>
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="7FO-yG-nbg" secondAttribute="bottom" id="8Sa-u5-SG3"/>
+                                                                <constraint firstAttribute="bottom" secondItem="3Kd-yK-JU1" secondAttribute="bottom" id="ZZr-cI-hNM"/>
                                                                 <constraint firstAttribute="trailing" secondItem="7FO-yG-nbg" secondAttribute="trailing" id="d6d-9x-TCZ"/>
                                                                 <constraint firstItem="7FO-yG-nbg" firstAttribute="top" secondItem="XFB-51-w1m" secondAttribute="top" id="gwy-oN-PmC"/>
+                                                                <constraint firstAttribute="trailing" secondItem="3Kd-yK-JU1" secondAttribute="trailing" id="hFg-Bj-2lw"/>
                                                                 <constraint firstItem="7FO-yG-nbg" firstAttribute="leading" secondItem="XFB-51-w1m" secondAttribute="leading" id="xaR-xA-E2h"/>
                                                             </constraints>
                                                             <size key="customSize" width="90" height="90"/>
                                                             <connections>
-                                                                <outlet property="customIconImageView" destination="7FO-yG-nbg" id="1Ub-gn-sKt"/>
+                                                                <outlet property="customIconImageView" destination="7FO-yG-nbg" id="TMC-DC-0gQ"/>
+                                                                <outlet property="gifImageView" destination="3Kd-yK-JU1" id="v9c-2O-S1n"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
-                                                        <outlet property="dataSource" destination="CVv-bK-pts" id="KVb-Ax-u7i"/>
+                                                        <outlet property="flowLayout" destination="f8Y-uL-5Im" id="yb0-5Z-EOd"/>
+                                                        <outlet property="pictureCollectionViewHeightCons" destination="W9p-qP-PbU" id="vY1-XT-gAR"/>
+                                                        <outlet property="pictureCollectionViewWidthCons" destination="9RW-GG-KmH" id="2wM-W6-Qhs"/>
                                                     </connections>
                                                 </collectionView>
                                             </subviews>
@@ -380,14 +401,11 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="contentLabel" destination="xKf-Gi-tfG" id="l6L-ZH-VCH"/>
-                                    <outlet property="flowLayout" destination="f8Y-uL-5Im" id="iyu-Jq-Ida"/>
                                     <outlet property="footerView" destination="RAb-UD-Th9" id="DHj-uo-958"/>
                                     <outlet property="forwardLabel" destination="MmI-Ra-Lv2" id="Wuu-1G-N5v"/>
                                     <outlet property="iconImageView" destination="o3P-9r-OEN" id="BLz-O4-2gb"/>
                                     <outlet property="nameLabel" destination="hIO-hV-VwA" id="Mul-Hg-FWu"/>
                                     <outlet property="pictureCollectionView" destination="Nui-0i-Sdb" id="ulF-rl-fHB"/>
-                                    <outlet property="pictureCollectionViewHeightCons" destination="W9p-qP-PbU" id="GSY-O9-CGX"/>
-                                    <outlet property="pictureCollectionViewWidthCons" destination="9RW-GG-KmH" id="A8c-I3-SPD"/>
                                     <outlet property="sourceLabel" destination="frb-Z5-k0h" id="1c0-Vx-Oxz"/>
                                     <outlet property="timeLabel" destination="TDW-sW-Jl0" id="Btg-aV-dZR"/>
                                     <outlet property="verifiedImageView" destination="sl5-Gf-ZeD" id="QBV-ZX-GBP"/>
@@ -411,6 +429,7 @@
     </scenes>
     <resources>
         <image name="common_icon_membership_level1" width="14" height="14"/>
+        <image name="gif" width="30" height="17"/>
         <image name="timeline_card_bottom_background" width="22" height="36"/>
         <image name="timeline_icon_comment" width="18" height="18"/>
         <image name="timeline_icon_retweet" width="18" height="18"/>

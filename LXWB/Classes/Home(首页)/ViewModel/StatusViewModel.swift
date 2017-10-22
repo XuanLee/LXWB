@@ -83,12 +83,13 @@ class StatusViewModel: NSObject {
         //判断有没有转发图片，有的话加在转发的配图 没有的话加载正文配图
         if let picurls = (status.retweeted_status != nil) ? status.retweeted_status?.pic_urls : status.pic_urls
         {
+            bmiddle_pic = [NSURL]()
             thumbnail_pic = [URL]()
             //2.遍历配图数组下载图片
             for dict in picurls
             {
                 //2.1取出图片url字符串
-                guard let urlStr = dict["thumbnail_pic"] as? String else
+                guard var urlStr = dict["thumbnail_pic"] as? String else
                 {
                     //没有图片则执行下次循环
                     continue
@@ -96,8 +97,11 @@ class StatusViewModel: NSObject {
                 let url = NSURL.init(string: urlStr)
                 //拿到配图数组的url
                 thumbnail_pic?.append(url! as URL)
+                //2.2处理大图的url
+                urlStr = urlStr.replacingOccurrences(of: "thumbnail", with: "bmiddle")
+                bmiddle_pic?.append(NSURL.init(string: urlStr)!)
+
             }
-        
         }
                 
         
@@ -130,6 +134,11 @@ class StatusViewModel: NSObject {
     
     /// 保存所有配图的URL
     var thumbnail_pic : [URL]?
+    
+    /// 保存所有配图大图URL
+    var bmiddle_pic: [NSURL]?
+    
+    var bmiddle_str: [NSString]?
     
     /// 转发微博格式化之后正文
     var forwardText: String?

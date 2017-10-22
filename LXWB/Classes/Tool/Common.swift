@@ -26,3 +26,5 @@ let LXPresentationManagerDidDismissed =
 "LXPresentationManagerDismissed"
 /// 切换根控制器的通知
 let LXSwitchRootViewController =  "LXSwitchRootViewController"
+/// 显示图片浏览器通知
+let LXShowPhotoBrowserController = "LXShowPhotoBrowserController"

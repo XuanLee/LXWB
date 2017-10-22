@@ -33,6 +33,7 @@ class HomeTableViewController: BaseTableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(HomeTableViewController.titleChange), name: NSNotification.Name(rawValue : LXPresentationManagerDidPresented), object: animatorManager)
         NotificationCenter.default.addObserver(self
             , selector: #selector(HomeTableViewController.titleChange), name: NSNotification.Name(rawValue : LXPresentationManagerDidDismissed), object: animatorManager)
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeTableViewController.showBrowser(notice:)), name: NSNotification.Name(rawValue: LXShowPhotoBrowserController), object: nil)
         
        //4.获取微博数据
         loadData()
@@ -235,8 +236,29 @@ class HomeTableViewController: BaseTableViewController {
         //弹出菜单
         present(menuView, animated: true, completion: nil)
         
-        
     }
+    
+    ///监听图片游览器通知
+    @objc func showBrowser(notice : Notification){
+        // 注意: 但凡是通过网络或者通知获取到的数据, 都需要进行安全校验
+        
+        guard let pictures = notice.userInfo?["bmiddle_pic"] as? [NSURL]  else{
+            SVProgressHUD.showError(withStatus: "没有图片")
+            return
+        }
+        
+        guard let index = notice.userInfo?["indexPath"] as? IndexPath else{
+            SVProgressHUD.showError(withStatus: "没有索引")
+            return
+        }
+        
+        let vc = BrowserViewController.init(bmiddle_pic: pictures, indexPath: index as NSIndexPath)
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
+    
+    
     //MARK: - 懒加载
     fileprivate lazy var titleButton : TitleButton = {
         let btn = TitleButton()

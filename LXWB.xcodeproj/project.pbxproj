@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		854032E01C2E002CD076123C /* Pods_LXWB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5517EF004F66FD7BDAAE52BF /* Pods_LXWB.framework */; };
+		9B0787C21F9B847A00CB7728 /* LXPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0787C11F9B847A00CB7728 /* LXPictureView.swift */; };
+		9B0787C51F9B96C600CB7728 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0787C41F9B96C600CB7728 /* BrowserViewController.swift */; };
 		9B1D84BB1F94388A00FB2E63 /* MessageTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B1D84BA1F94388A00FB2E63 /* MessageTableViewController.storyboard */; };
 		9B5A70F91F936FCE007B02B9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5A70F81F936FCE007B02B9 /* Home.storyboard */; };
 		9B5A70FF1F937941007B02B9 /* HomeTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5A70FD1F937941007B02B9 /* HomeTableViewController.storyboard */; };
@@ -41,6 +43,8 @@
 		9B71A2261F86294100222503 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B71A2251F86294100222503 /* QRCode.storyboard */; };
 		9B71A2281F8629BE00222503 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71A2271F8629BE00222503 /* QRCodeViewController.swift */; };
 		9B71A22A1F86367B00222503 /* LXQRCodeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71A2291F86367B00222503 /* LXQRCodeCreateViewController.swift */; };
+		9B9380911F9CA11000F6160E /* LXProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B93808F1F9CA11000F6160E /* LXProgressView.swift */; };
+		9B9380921F9CA11000F6160E /* LXProgressImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9380901F9CA11000F6160E /* LXProgressImageView.swift */; };
 		9BA24DBF1F9896C3000EF8C6 /* RefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BA24DBE1F9896C3000EF8C6 /* RefreshView.xib */; };
 		9BA24DC11F989754000EF8C6 /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA24DC01F989754000EF8C6 /* RefreshView.swift */; };
 		9BA39E6C1F8CB8B100A690C2 /* OAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BA39E6B1F8CB8B100A690C2 /* OAuth.storyboard */; };
@@ -77,6 +81,8 @@
 /* Begin PBXFileReference section */
 		48A1A5CAFB3BABFAE638D129 /* Pods-LXWB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LXWB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LXWB/Pods-LXWB.debug.xcconfig"; sourceTree = "<group>"; };
 		5517EF004F66FD7BDAAE52BF /* Pods_LXWB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LXWB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0787C11F9B847A00CB7728 /* LXPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXPictureView.swift; sourceTree = "<group>"; };
+		9B0787C41F9B96C600CB7728 /* BrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		9B1D84BA1F94388A00FB2E63 /* MessageTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MessageTableViewController.storyboard; path = "LXWB/Classes/Message(消息)/MessageTableViewController.storyboard"; sourceTree = SOURCE_ROOT; };
 		9B5A70F81F936FCE007B02B9 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		9B5A70FD1F937941007B02B9 /* HomeTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HomeTableViewController.storyboard; path = ../QRcode/Controller/HomeTableViewController.storyboard; sourceTree = "<group>"; };
@@ -116,6 +122,8 @@
 		9B71A2251F86294100222503 /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		9B71A2271F8629BE00222503 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		9B71A2291F86367B00222503 /* LXQRCodeCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXQRCodeCreateViewController.swift; sourceTree = "<group>"; };
+		9B93808F1F9CA11000F6160E /* LXProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXProgressView.swift; sourceTree = "<group>"; };
+		9B9380901F9CA11000F6160E /* LXProgressImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXProgressImageView.swift; sourceTree = "<group>"; };
 		9BA24DBE1F9896C3000EF8C6 /* RefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RefreshView.xib; path = LXWB/Classes/RefreshView.xib; sourceTree = SOURCE_ROOT; };
 		9BA24DC01F989754000EF8C6 /* RefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
 		9BA39E6B1F8CB8B100A690C2 /* OAuth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OAuth.storyboard; sourceTree = "<group>"; };
@@ -167,6 +175,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9B0787C31F9B88C700CB7728 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				9B0787C41F9B96C600CB7728 /* BrowserViewController.swift */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
 		9B5A70FC1F937941007B02B9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +206,7 @@
 			children = (
 				9B5A70FD1F937941007B02B9 /* HomeTableViewController.storyboard */,
 				9B5A71071F93795E007B02B9 /* HomeTableViewCell.swift */,
+				9B0787C11F9B847A00CB7728 /* LXPictureView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,6 +297,7 @@
 		9B719D3D1F836E98005E434F /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				9B0787C31F9B88C700CB7728 /* Browser */,
 				9BA24DBD1F9896A3000EF8C6 /* Refresh */,
 				9B5A70FC1F937941007B02B9 /* Controller */,
 				9B5A71011F937955007B02B9 /* Model */,
@@ -327,6 +345,7 @@
 		9B719D551F837A41005E434F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				9B9380861F9C91CC00F6160E /* ProgressView */,
 				9B719D561F837A50005E434F /* UIButton+Extension.swift */,
 				9BEB87341F86062E0049399D /* UIBarButton+Extension.swift */,
 				9BEB87361F8609F20049399D /* TitleButton.swift */,
@@ -344,6 +363,15 @@
 				9B719D611F839862005E434F /* MainVCSettings.json */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		9B9380861F9C91CC00F6160E /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				9B93808F1F9CA11000F6160E /* LXProgressView.swift */,
+				9B9380901F9CA11000F6160E /* LXProgressImageView.swift */,
+			);
+			path = ProgressView;
 			sourceTree = "<group>";
 		};
 		9BA24DBD1F9896A3000EF8C6 /* Refresh */ = {
@@ -611,11 +639,13 @@
 				9B5A710D1F93A486007B02B9 /* StatusViewModel.swift in Sources */,
 				9B71A2281F8629BE00222503 /* QRCodeViewController.swift in Sources */,
 				9BA24DC11F989754000EF8C6 /* RefreshView.swift in Sources */,
+				9B9380921F9CA11000F6160E /* LXProgressImageView.swift in Sources */,
 				9B719D5F1F838EEA005E434F /* BaseTableViewController.swift in Sources */,
 				9BCAFC781F8E10740076B5C5 /* WelcomeViewController.swift in Sources */,
 				9B719D101F836E0F005E434F /* LXMainViewController.swift in Sources */,
 				9B5A710B1F939C47007B02B9 /* NSData+Extension.swift in Sources */,
 				9B719D461F8375E8005E434F /* MessageTableViewController.swift in Sources */,
+				9B9380911F9CA11000F6160E /* LXProgressView.swift in Sources */,
 				9B719D421F8375CE005E434F /* DiscoverTableViewController.swift in Sources */,
 				9B719D571F837A50005E434F /* UIButton+Extension.swift in Sources */,
 				9B719D5D1F8389CB005E434F /* VisitorView.swift in Sources */,
@@ -629,11 +659,13 @@
 				9B64F42B1F93579B00791075 /* ProfileTableTableViewController.swift in Sources */,
 				9B71A22A1F86367B00222503 /* LXQRCodeCreateViewController.swift in Sources */,
 				9BA39E701F8CBCCE00A690C2 /* Common.swift in Sources */,
+				9B0787C51F9B96C600CB7728 /* BrowserViewController.swift in Sources */,
 				9BEB87371F8609F20049399D /* TitleButton.swift in Sources */,
 				9B719D4E1F8377A1005E434F /* NullViewController.swift in Sources */,
 				9B71A2221F86128F00222503 /* LXPresentationManager.swift in Sources */,
 				9BCAFC7E1F8E13880076B5C5 /* NewfeatureViewController.swift in Sources */,
 				9BA39E741F8CC4A700A690C2 /* UserAccount.swift in Sources */,
+				9B0787C21F9B847A00CB7728 /* LXPictureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
